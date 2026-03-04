@@ -2,7 +2,7 @@
 
 PyTorch RetinaNet codebase extended with Dirichlet-based epistemic uncertainty modeling and random-set classification support.
 
-## What this clean repo includes
+## This repo includes
 - Core RetinaNet package in `retinanet/`
 - Training/evaluation entrypoints:
   - `train.py`
