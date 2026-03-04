@@ -19,7 +19,6 @@ PyTorch RetinaNet codebase extended with Dirichlet-based epistemic uncertainty m
   - `road_agent_clustering_pruned_31.txt`
   - `road_agent_clustering_pruned_9cls.txt`
 
-The repository intentionally excludes generated experiment outputs, caches, and checkpoints.
 
 ## Environment setup
 ```bash
@@ -51,7 +50,7 @@ python train.py \
   --depth 50
 ```
 
-Dirichlet standard classifier:
+Dirichlet variant with standard classifier:
 ```bash
 python train.py \
   --dataset coco \
@@ -60,7 +59,7 @@ python train.py \
   --depth 50
 ```
 
-Dirichlet random-set classifier (requires cluster file):
+Dirichlet variant with random-set classifier (requires cluster file):
 ```bash
 python train.py \
   --dataset coco \
@@ -88,7 +87,7 @@ python epistemic_uncertainty_eval.py \
   --output_dir uncertainty_eval_output
 ```
 
-Alpha simplex visualization:
+2D simplex visualization:
 ```bash
 python alpha_simplex_eval.py \
   --coco_path /path/to/coco \
@@ -100,7 +99,6 @@ python alpha_simplex_eval.py \
 ## Notes
 - `--random_set_path` is required when `--model_variant dirichlet_randomset` is used.
 - This repository does not include datasets or pretrained checkpoints.
-- Generated artifacts are ignored by `.gitignore` for cleaner commits.
 
 ## License
 See `LICENSE`.
